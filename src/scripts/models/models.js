@@ -1,6 +1,94 @@
 import Backbone from 'backbone'
-import $ from 'jquery'
-import {app_name} from '../app'
+
+// -----------------------------
+// CUSTOM MODELS AND COLLECTIONS
+// -----------------------------
+
+export class ToDoModel extends Backbone.Model {
+	urlRoot: '/api/tasks'
+	idAttribute: '_id'
+	defaults: {
+		title: '',
+		description: '',
+		done: false,
+		priority: 'normal',
+		category: 'misc',
+	}
+}
+export class ToDoCollection extends Backbone.Collection {
+	url: '/api/tasks/'
+	model: ToDoModel
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------
+// USER AUTO MODELS => LEAVE
+// -------------------------
 
 // ..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
 const UserAuthModel = Backbone.Model.extend({

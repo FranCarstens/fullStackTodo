@@ -7,7 +7,7 @@ class Header extends React.Component {
 	render() {
 		return (
 			<header>
-				<div className="logo"><h1>Checkd</h1></div>
+				<div className="logo icon-open"><h1>Checkd</h1></div>
 				<Navigation />
 				<AddTodoItem />
 			</header>
@@ -17,7 +17,7 @@ class Header extends React.Component {
 
 class Navigation extends React.Component {
 	_handleNavClick(e) {
-		let newView = e.target.value
+		var newView = e.target.title
 		Actions.changeView(newView)
 	}
 	render() {

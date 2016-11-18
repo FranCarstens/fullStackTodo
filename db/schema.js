@@ -25,7 +25,7 @@ const taskSchema = new mongoose.Schema({
 
 	title: { type: String, required: true },
 	description: String,
-	done: { type: boolean, default: false },
+	done: { type: Boolean, default: false },
 	priority: { type: String, default: 'normal' },
 	category: String,
 	userID: String,

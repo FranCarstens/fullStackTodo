@@ -2,6 +2,8 @@ let Router = require('express').Router;
 const apiRouter = Router()
 let helpers = require('../config/helpers.js')
 
+let Task = require('../db/schema.js').Task
+
 // ---------------------
 // USER ROUTER
 // ---------------------
@@ -29,15 +31,36 @@ apiRouter
 		})
 	})
 	.put('/tasks/:_id', function(req, res) {
+			console.log('request paramaters', req.params)
+			delete req.body._id
 		Task.findByIdAndUpdate(req.params._id, req.body, function(err, record) {
+			console.log('request paramaters', req.params)
+			console.log('request body', req.body)
 			if (err) {
 				res.status(500).send(err)
 			}
-			else if (!record {
+			else if (!record) {
 				res.status(400).send('no record of that todo')
 			}
 			else {
-				res.json(records)
+				res.json(req.body)
+			}
+		})
+	})
+	.delete('/tasks/:_id', function(req, res) {
+			console.log('request paramaters', req.params)
+			delete req.body._id
+		Task.findByIdAndRemove(req.params._id, req.body, function(err, record) {
+			console.log('request paramaters', req.params)
+			console.log('request body', req.body)
+			if (err) {
+				res.status(500).send(err)
+			}
+			else if (!record) {
+				res.status(400).send('no record of that todo')
+			}
+			else {
+				res.json(req.body)
 			}
 		})
 	})

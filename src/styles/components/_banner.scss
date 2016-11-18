@@ -1,0 +1,72 @@
+header {
+	height: 4rem;
+	line-height: 4rem;
+	width: 100%;
+	@include clearfix;
+	border-bottom: 1px solid lighten($blue, 5);
+	div, nav {
+		float: left;
+	}
+	div.logo {
+		background-color: $yellow;
+		width: 4rem;
+		height: 4rem;
+		h1 {
+			display: none;
+		}
+		&::before {
+			width: 4rem;
+			height: 4rem;
+			line-height: 4rem;
+			text-align: center;
+			display: block;
+			font-size: 2rem;
+			color: $blue;
+		}
+	}
+	nav {
+		li {
+			display: inline-block;
+			height: 4rem;
+			padding: 0;
+			background-color: lighten($blue, 5);
+			border-right: 1px solid $blue;
+			width: 8rem;
+			text-align: center;
+			cursor: pointer;
+			&:hover {
+				background-color: lighten($blue,10);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

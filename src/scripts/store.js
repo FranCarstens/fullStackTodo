@@ -6,13 +6,14 @@ const Store = _.extend(Backbone.Events, {
 	_data: {
 		todoCollection: new ToDoCollection(),
 		taskView: 'all', // todo : done : all
-		categoryView: 'all'
+		categoryView: 'all',
+		addForm: {'opacity': '0', 'top': '-100%'}
 	},
 	_getProp(key) { return this._data[key] },
 	_getData() { return this._data },
 	_emitChange() { this.trigger('updateState') },
 	_setData(stateObj) {
-		this._data = _.extend(this.data, stateObj)
+		this._data = _.extend(this._data, stateObj)
 		this._emitChange()
 		},
 	_initialize() {

@@ -10,6 +10,7 @@ const PrimaryApp = React.createClass ({
 		Store.on('updateState', () => {
 			this.setState(Store._getData())
 		})
+		Actions.fetchTodo()
 	},
 	componentWillUnmount() {
 		Store.off('updateState')
@@ -19,11 +20,22 @@ const PrimaryApp = React.createClass ({
 	},
 
 	render() {
-		
+
 		var filteredTasks = this.state.todoCollection
-		if (this.state.taskView === 'todo') { filteredTasks = filteredTasks.filter(mod => mod.get('done' === false)) }
-		if (this.state.taskView === 'completed') { filteredTasks = filteredTasks.filter(mod => mod.get('done' === true)) }
-		if (this.state.taskView === 'all') { filteredTasks = this.state.todoCollection }
+
+		if (this.state.taskView === 'todo') {
+			filteredTasks = filteredTasks.filter(mod => mod.get('done') === false)
+		}
+		if (this.state.taskView === 'completed') {
+			filteredTasks = filteredTasks.filter(mod => mod.get('done') === true)
+		}
+		if (this.state.taskView === 'all') { 
+			filteredTasks = filteredTasks
+		}
+
+		console.log('the tasks', filteredTasks)
+
+
 		return (
 			<div>
 				<Header />

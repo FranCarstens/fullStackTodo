@@ -3,9 +3,11 @@ import ToDoItem from './todoItem'
 
 class ToDoList extends React.Component {
 	render() {
+		var coll = this.props.collection
+		console.log('here ya go coll',coll)
 		return (
 			<section id="todo_list">
-				{this.props.collection.models.map((item, index) => <ToDoItem model={this.props.collection.models[index]} />)}
+				{ coll.map((item, index) => <ToDoItem model={item} key={index} />)}
 			</section>
 		)
 	}

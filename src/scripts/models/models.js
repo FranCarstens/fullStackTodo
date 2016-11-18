@@ -4,9 +4,9 @@ import Backbone from 'backbone'
 // CUSTOM MODELS AND COLLECTIONS
 // -----------------------------
 
-export class ToDoModel extends Backbone.Model {
-	urlRoot: '/api/tasks'
-	idAttribute: '_id'
+export const ToDoModel = Backbone.Model.extend({
+	urlRoot: '/api/tasks',
+	idAttribute: '_id',
 	defaults: {
 		title: '',
 		description: '',
@@ -14,11 +14,11 @@ export class ToDoModel extends Backbone.Model {
 		priority: 'normal',
 		category: 'misc',
 	}
-}
-export class ToDoCollection extends Backbone.Collection {
-	url: '/api/tasks/'
+})
+export const ToDoCollection = Backbone.Collection.extend({
+	url: '/api/tasks',
 	model: ToDoModel
-}
+})
 
 
 

@@ -7,7 +7,7 @@ class Header extends React.Component {
 	render() {
 		return (
 			<header>
-				<div className="logo icon-open"><h1>Checkd</h1></div>
+				<div className="logo icon-open"><a href=""><h1>Check'd</h1></a></div>
 				<Navigation />
 				<AddTodoItem />
 			</header>

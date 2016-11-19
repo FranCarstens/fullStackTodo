@@ -1,7 +1,7 @@
 // FIX FLOAT CONTAINERS
 
 body {
-	background: $blue;
+	background: $blue4;
 	font-size: 1rem;
 }
 input, textarea, select {
@@ -9,13 +9,13 @@ input, textarea, select {
 	border-radius: 0;
 	margin: 0;
 	border: none;
-	background-color: lighten($blue, 15);
+	background-color: $blue4;
 	padding: 0.75rem 1rem;
 	height: 3rem;
-	color: $light-grey;
+	color: $blue1;
 	font-size: 1rem;
 	&:focus {
-		outline: none;
+		outline: 2px solid $yellow;
 	}
 }
 input[type="submit"] {
@@ -23,6 +23,11 @@ input[type="submit"] {
 	text-transform: uppercase;
 	font-weight: 700;
 	cursor: pointer;
+	&:hover, &:focus {
+		background-color: lighten($yellow, 10);
+		outline: none;
+		transform: translate(0,2px);
+	}
 }
 [class^="icon-"], [class*=" icon-"] {
 	oveflow: hidden;

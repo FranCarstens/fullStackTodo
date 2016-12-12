@@ -1,24 +1,22 @@
-#[Betsy for Etsy - Full Stack.](https://betsyforetsy.herokuapp.com/)
+#[Check'd - Todo List](https://check-d.herokuapp.com)
 
-*Betsy for Etsy* provides an improved Etsy browsing experience. Browse through a number of the latest Etsy products and save them to your favorites.
+Everything is a todo list, so is *Check'd*. What makes Check'd better? For one, it's easy on the eyes.
 
-Built on the Maestro full stack starter kit. Betsy for Etsy was built using HMTL5, Sass, Javascript, React with Flux, Backbone, Express, Mongoose and MongoDB. Product listings are generated via the Etsy API.
+Built on the Maestro full stack starter kit. Check'd was built using HMTL5, Sass, Javascript, React with Flux, Backbone, Express, Mongoose and MongoDB.
 
-Betsy started as a weekend assignment for *The Iron Yard*. Styling for this project is partially complete.
+Check'd started as a weekend assignment for *The Iron Yard*.
 
 **Live preview:** https://betsyforetsy.herokuapp.com/
 
 ##Todo
 
-* Include Search functionality.
-* Improve and complete styling.
-* Add loading state.
-* Improve empty faves display with call to action.
+* Active tab functionlity.
+* Move to full stack for user specific todos.
+* Add Filtering via tags.
 
 ##Credits
 
 * Built on: Maestro by [Justin Richards](https://github.com/magentanova/maestro).
-* Product: Etsy.com
 
 ##License
 [MIT License](https://opensource.org/licenses/MIT)

@@ -6,7 +6,7 @@ Built on the Maestro full stack starter kit. Check'd was built using HMTL5, Sass
 
 Check'd started as a weekend assignment for *The Iron Yard*.
 
-**Live preview:** https://betsyforetsy.herokuapp.com/
+**Live preview:** https://check-d.herokuapp.com
 
 ##Todo
 
